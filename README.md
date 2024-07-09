@@ -1,25 +1,25 @@
 # README
-Project Name
+Project Name<br/>
 Ruby_Task
-<br/>
-Description
+<br/><br/>
+Description<br/>
 This project manages Power Banks, stations, locations, and warehouses. It includes CRUD operations, authentication, authorization, and a simple front-end for the admin to perform various tasks.
 <br/>
-Installation
- 1-Clone the repository:
-   git clone <repository-url>
- 2-Navigate to the project directory:
-   cd Ruby_Task
- 3-Install the required gems:
-   bundle install
- 4-Set up the database:
-   rails db:setup
- <br/>
-Usage
- Start the Rails server:
-  rails server
-Open your browser and go to http://localhost:3000/ to access the admin dashboard.
-
+Installation<br/>
+ 1-Clone the repository:<br/>
+   git clone <repository-url><br/>
+ 2-Navigate to the project directory:<br/>
+   cd Ruby_Task<br/>
+ 3-Install the required gems:<br/>
+   bundle install<br/>
+ 4-Set up the database:<br/>
+   rails db:setup<br/>
+ <br/><br/>
+Usage<br/>
+ Start the Rails server:<br/>
+  rails server<br/>
+Open your browser and go to http://localhost:3000/ to access the admin dashboard.<br/>
+<br/>
 <br/>
  References :
 https://medium.com/geekculture/how-to-create-a-rails-backend-api-871fcddd6e20
