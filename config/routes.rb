@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'locations/userloc'
   get 'stations/userstations'
   get 'powerbanks/userpowerbanks'
+  get 'devise/admincreatsuser'
 
 
   resources :warehouses
