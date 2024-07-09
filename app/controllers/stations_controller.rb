@@ -32,11 +32,11 @@ class StationsController < ApplicationController
       render :edit
     end
   end
-    def userloc
-      @station = Station.all
-    end
-  
-  
+
+  def userstations
+    @stations = Station.all
+  end
+
   def destroy
     @station = Station.find(params[:id])
     @station.destroy

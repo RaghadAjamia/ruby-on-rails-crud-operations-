@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-center">
-    <h4 class="mt-4 display-4"> Stations</h4>
+    <h4 class="mt-4 display-4">Stations</h4>
   </div>
 
   <% if @stations.present? %>
@@ -8,19 +8,19 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Status</th>
-          <th scope="col">Location</th>
-          <th scope="col">Warehouse</th>
+            <th scope="col">Name</th>
+            <th scope="col">Status</th>
+            <th scope="col">Location</th>
+            <th scope="col">Warehouse</th>
           </tr>
         </thead>
         <tbody>
           <% @stations.each do |station| %>
-                        <tr>
-            <td><%= station.name %></td>
-            <td><%= station.status %></td>
-            <td><%= station.location.address %></td>
-            <td><%= station.warehouse.name %></td>
+            <tr>
+              <td><%= station.name %></td>
+              <td><%= station.status %></td>
+              <td><%= station.location.address %></td>
+              <td><%= station.warehouse.name %></td>
             </tr>
           <% end %>
         </tbody>
@@ -28,8 +28,9 @@
     </div>
   <% else %>
     <div class="p-3 mb-2 bg-light text-dark">
-      <span class="text-info font-weight-bold">Welcome! </span>
-No available stations!    </div>
+      <span class="text-info font-weight-bold">Welcome!</span>
+      No available stations!
+    </div>
   <% end %>
   <%= link_to 'Back', home_userhomepage_path, class: 'btn btn-primary mt-2' %>
 </div>
