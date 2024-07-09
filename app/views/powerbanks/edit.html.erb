@@ -7,7 +7,7 @@
       
       <div class="field">
         <%= form.label :status %>
-        <%= form.select :status, options_for_select([['In Use', 'in_use'], ['Available', 'available'], ['In Repair', 'in_repair']], @power_bank.status) %>
+        <%= form.select :status, options_for_select([['In Use', 'in_use'], ['Available', 'available']], @power_bank.status) %>
       </div>
       
       <div class="form-group">
