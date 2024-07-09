@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="row justify-content-center">
     <h4 class="mt-4 mb-4 display-4">Power Banks</h4>
@@ -41,8 +42,9 @@
       </div>
     <% end %>
   </div>
-  
+  <%= will_paginate @power_banks %>
   <div class="row justify-content-center">
     <%= link_to 'Back', home_dashboard_path, class: 'btn btn-primary mt-2' %>
   </div>
 </div>
+

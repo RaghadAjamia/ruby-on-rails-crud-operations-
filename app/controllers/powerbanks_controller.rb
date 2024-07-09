@@ -1,7 +1,8 @@
 class PowerbanksController < ApplicationController
+  require 'will_paginate/array'
 
   def index
-    @power_banks = PowerBank.all
+    @power_banks = PowerBank.paginate(page: params[:page], per_page: 7)
   end
 
   def show
