@@ -6,7 +6,6 @@ class PowerbanksController < ApplicationController
 
   def show
     @power_bank = PowerBank.find(params[:id])
-
   end
 
   def new
@@ -16,7 +15,7 @@ class PowerbanksController < ApplicationController
   def create
     @power_bank = PowerBank.new(power_bank_params)
     if @power_bank.save
-      redirect_to powerbanks_path, notice: 'Power bank was successfully created.'
+      redirect_to powerbanks_path
     else
       render :new
     end
@@ -24,29 +23,32 @@ class PowerbanksController < ApplicationController
 
   def edit
     @power_bank = PowerBank.find(params[:id])
-
   end
 
   def update
+    @power_bank = PowerBank.find(params[:id]) 
     if @power_bank.update(power_bank_params)
-      redirect_to @power_bank, notice: 'Power bank was successfully updated.'
+      redirect_to powerbanks_path
     else
       render :edit
     end
   end
+  
+  
+
+  def userpowerbanks
+    @power_banks = PowerBank.all
+  end
 
   def destroy
+    @power_bank = PowerBank.find(params[:id])
     @power_bank.destroy
-    redirect_to power_banks_url, notice: 'Power bank was successfully destroyed.'
+    redirect_to powerbanks_path
   end
 
   private
 
-  def set_power_bank
-    @power_bank = PowerBank.find(params[:id])
-  end
-
   def power_bank_params
-    params.require(:power_bank).permit(:serial_number, :locatable_id, :locatable_type)
+    params.require(:power_bank).permit(:serial_number, :locatable_type, :locatable_id, :status)
   end
 end

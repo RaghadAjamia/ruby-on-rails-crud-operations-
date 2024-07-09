@@ -13,6 +13,8 @@
         <thead>
           <tr>
             <th>Serial Number</th>
+            <th>Status</th>
+
             <th>Location Type</th>
             <th>Location</th>
             <th colspan="3">Actions</th>
@@ -22,10 +24,13 @@
           <% @power_banks.each do |power_bank| %> <!-- Use power_bank instead of @power_bank -->
             <tr>
               <td><%= power_bank.serial_number %></td>
+              <td><%= power_bank.status %></td>
+
               <td><%= power_bank.locatable_type %></td>
               <td><%= power_bank.locatable&.name || power_bank.locatable&.address %></td> <!-- Corrected here -->
-              <td><%= link_to 'Show', powerbank_path(power_bank) %></td>
-            </tr>
+              <td><%= link_to 'Show', powerbank_path(power_bank.id) %></td>
+              <td><%= link_to 'Edit', edit_powerbank_path(power_bank.id) %></td>
+
           <% end %>
         </tbody>
       </table>

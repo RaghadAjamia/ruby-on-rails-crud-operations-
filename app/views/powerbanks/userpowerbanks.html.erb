@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h4 class="mt-4 mb-4 display-4">User Power Banks</h4>
+  </div>
+  
+  <div class="row justify-content-center">
+    <% if @power_banks.present? %>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Serial Number</th>
+            <th>Location Type</th>
+            <th>Location</th>
+            <th colspan="3">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @power_banks.each do |power_bank| %>
+            <tr>
+              <td><%= power_bank.serial_number %></td>
+              <td><%= power_bank.locatable_type %></td>
+              <td><%= power_bank.locatable&.name || power_bank.locatable&.address %></td>
+              <td><%= link_to 'Show', powerbank_path(power_bank) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+      <div class="p-3 mb-2 bg-light text-dark">
+        <span class="text-info font-weight-bold">Welcome!</span>
+        Create your first Power Bank
+      </div>
+    <% end %>
+  </div>
+  
+  <div class="row justify-content-center">
+    <%= link_to 'Back', home_userhomepage_path, class: 'btn btn-primary mt-2' %>
+  </div>
+</div>

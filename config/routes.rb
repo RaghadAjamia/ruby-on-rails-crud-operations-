@@ -10,14 +10,22 @@ Rails.application.routes.draw do
   get 'home/userhomepage'
   get 'locations/userloc'
   get 'stations/userstations'
-  
+  get 'powerbanks/userpowerbanks'
+
+
   resources :warehouses
-  resources :powerbanks
+  resources :powerbanks do
+  collection do
+    get 'userpowerbanks'
+  end
+end
+
   resources :stations do
   collection do
     get 'userstations'
   end
 end
+
   resources :locations do
     collection do
       get 'userloc'
