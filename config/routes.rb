@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get 'home/userhomepage'
   get 'locations/userloc'
   get 'stations/userstations'
-
   
   resources :warehouses
   resources :powerbanks

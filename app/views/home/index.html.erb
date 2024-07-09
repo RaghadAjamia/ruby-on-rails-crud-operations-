@@ -74,16 +74,17 @@
       <!-- Column for Login Buttons -->
       <div class="col-md-4">
         <div class="content">
-          <h4 class="subtitle">Sign Up Today</h4>
+          <h4 class="subtitle">User registration</h4>
           <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-secondary  mt-2' %>
           
           <%= link_to 'Login ',   user_session_path, class: 'btn btn-secondary mt-2' %>
           <br/>
+
           <br/>
           <br/>
           <h4 class="subtitle">For admins click here</h4>
 
-          <%= link_to 'Admin Dashboard', home_dashboard_path, class: 'btn btn-primary  mt-2' %> <!-- Changed to locations_path for demonstration -->
+          <%= link_to 'Admin sign in', new_admin_session_path, class: 'btn btn-primary  mt-2' %> <!-- Changed to locations_path for demonstration -->
         </div>
       </div>
     </div>
