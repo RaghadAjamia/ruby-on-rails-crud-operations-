@@ -53,6 +53,8 @@ class PowerbanksController < ApplicationController
                   Station.all
                 when 'Warehouse'
                   Warehouse.all
+                  when 'Warehouse'
+                  Warehouse.all
                 else
                   []
                 end
