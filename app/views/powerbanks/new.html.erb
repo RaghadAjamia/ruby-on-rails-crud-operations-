@@ -4,7 +4,17 @@
   </div>
   <div class="row justify-content-center">
     <%= form_with scope: :power_bank, url: powerbanks_path, local: true do |form| %>
-      
+      <% if @power_bank.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@power_bank.errors.count, "error") %> prohibited this power bank from being saved:</h2>
+          <ul>
+            <% @power_bank.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
       <div class="form-group">
         <%= form.label :serial_number %>
         <%= form.text_field :serial_number, class: 'form-control' %>
@@ -12,7 +22,7 @@
 
       <div class="form-group">
         <%= form.label :locatable_type, "Location Type" %>
-        <%= form.select :locatable_type, options_for_select(['Warehouse', 'Station'], @powerbank.locatable_type), {}, class: 'form-control' %>
+        <%= form.select :locatable_type, options_for_select(['Warehouse', 'Station'], @power_bank.locatable_type), {}, class: 'form-control' %>
       </div>
 
       <div class="form-group">
@@ -26,9 +36,8 @@
       </div>
 
       <div class="form-group">
-        <%= form.submit class: 'form-control btn-primary' %>
+        <%= form.submit 'Create Power Bank', class: 'btn btn-primary' %>
       </div>
-
     <% end %>
   </div>
 </div>

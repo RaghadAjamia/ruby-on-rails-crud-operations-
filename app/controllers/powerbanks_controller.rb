@@ -46,7 +46,18 @@ class PowerbanksController < ApplicationController
     @power_bank.destroy
     redirect_to powerbanks_path
   end
-
+  def locations
+    type = params[:type]
+    locations = case type
+                when 'Station'
+                  Station.all
+                when 'Warehouse'
+                  Warehouse.all
+                else
+                  []
+                end
+    render json: locations.as_json(only: [:id, :name])
+  end
   private
 
   def power_bank_params
