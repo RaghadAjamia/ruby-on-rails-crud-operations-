@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h4 class="mt-4 display-4"> Locations</h4>
+  </div>
+
+  <%= link_to 'Create Location', new_location_path %>
+  <% if @locations.present? %>
+    <div class="row justify-content-center">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Address</th>
+            <th scope="col" colspan="3">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @locations.each do |location| %>
+            <tr>
+              <td><%= location.address %></td>
+              <td><%= link_to 'Show', location_path(location.id) %></td>  
+              <td><%= link_to 'Edit', edit_location_path(location.id) %></td>
+
+            </tr>
+
+          <% end %>
+        </tbody>
+      </table>
+      
+    </div>
+  <% else %>
+    <div class="p-3 mb-2 bg-light text-dark">
+      <span class="text-info font-weight-bold">Welcome! </span>
+      Create your first location
+    </div>
+  <% end %>
+              <%= link_to 'Back ', home_dashboard_path, class: 'btn btn-primary mt-2' %>
+
+</div>

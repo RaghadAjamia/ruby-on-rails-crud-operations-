@@ -1,0 +1,34 @@
+
+<div class="container">
+  <div class="row justify-content-center">
+    <h4 class="mt-4 mb-4 display-4">Show details of station <%= @station.name %></h4>
+  </div>
+  <div class="row justify-content-center">
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>Name:</th>
+          <td><%= @station.name %></td>
+        </tr>
+        <tr>
+          <th>Status:</th>
+          <td><%= @station.status %></td>
+        </tr>
+
+        <tr>
+        <th>Location:</th>
+        <td><%= @station.location.address %></td>
+      </tr>
+
+      <tr>
+      <th>Warehouse:</th>
+      <td><%= @station.warehouse.name %></td>
+    </tr>
+    
+      </tbody>
+    </table>
+    
+  </div>
+   <%= link_to 'Edit', edit_station_path(@station), class: "btn btn-primary" %>
+  <%= link_to 'Back', stations_path, class: "btn btn-secondary" %>
+</div>

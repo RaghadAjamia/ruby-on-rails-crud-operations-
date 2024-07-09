@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h4 class="mt-4 display-4">Warehouse Details</h4>
+  </div>
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <th>Name:</th>
+        <td><%= @warehouse.name %></td>
+      </tr>
+      <tr>
+        <th>Location:</th>
+        <td><%= @warehouse.location.address %></td>
+      </tr>
+    </tbody>
+  </table>
+  <%= link_to 'Edit', edit_warehouse_path(@warehouse), class: "btn btn-primary" %>
+  <%= link_to 'Back', warehouses_path, class: "btn btn-secondary" %>
+</div>

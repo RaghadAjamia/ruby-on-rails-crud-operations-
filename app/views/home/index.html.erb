@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Projekt</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    .hero.is-link {
+      background-color: black; 
+      color: white; 
+      padding: 4rem; 
+    }
+    .hero-body {
+      text-align: center;
+    }
+    .hero-body h1, .hero-body h2 {
+      margin: 0; /* Remove default margins */
+    }
+    .button.is-link {
+      background-color: #007bff;
+      color: white;
+      border: none;
+    }
+    .button.is-primary {
+      background-color: #0056b3;
+      color: white;
+      border: none;
+    }
+    .button.is-info {
+      background-color: #17a2b8;
+      color: white;
+      border: none;
+    }
+    .mt-2 {
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero is-link">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">Welcome to Chaizer  </h1>
+      <br/>
+      <h2 class="subtitle">A small project management app built with Ruby on Rails and sqlite3  </h2>
+    </div>
+  </div>
+</section>
+
+</br>
+</br>
+</br>
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <!-- Column for Content -->
+      <div class="col-md-6">
+        <div class="content">
+
+          <h3 class="title">This project was built by </h3
+          </br>
+          <h4 style="font-weight: bold; color: blue;">Raghad Ajamia</h4>
+          <br/>
+
+          <p> I recently graduated with a degree in Computer Science from Jordan University of Science and Technology, achieving a strong GPA. I am eager to start my professional journey and am seeking an entry-level position as a software engineer .</p>
+          <p></p>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+      <!-- Column for Login Buttons -->
+      <div class="col-md-4">
+        <div class="content">
+          <h4 class="subtitle">Sign Up Today</h4>
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-secondary  mt-2' %>
+          
+          <%= link_to 'Login ',   user_session_path, class: 'btn btn-secondary mt-2' %>
+          <br/>
+          <br/>
+          <br/>
+          <h4 class="subtitle">For admins click here</h4>
+
+          <%= link_to 'Admin Dashboard', home_dashboard_path, class: 'btn btn-primary  mt-2' %> <!-- Changed to locations_path for demonstration -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

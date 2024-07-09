@@ -1,0 +1,54 @@
+<%= render 'home/adminheader'%>
+
+<section class="section pt-3" style="margin: 20px;">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <p class="title is-5 border-bottom pb-3 has-text-centered">Welcome 👋🏻</p>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <h5 class="card-title">Location</h5>
+            <p class="card-text">You can view update create locations .</p>
+          <%= link_to 'See Locations', locations_path, class: 'btn btn-primary mt-2' %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title">Warehouses</h5>
+              <p class="card-text">You can view, or create warehouses.</p>
+              <%= link_to 'See Warehouses', warehouses_path, class: 'btn btn-primary mt-2' %>
+
+          </div>
+        </div>
+
+
+        
+      </div>
+       <div class="col-md-4 mb-4">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title">Stations</h5>
+              <p class="card-text">You can view, or create stations.</p>
+              <%= link_to 'See Stations',stations_path, class: 'btn btn-primary mt-2' %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+      <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <h5 class="card-title">Power Banks</h5>
+          <p class="card-text">You can view, update, or create power banks.</p>
+              <%= link_to 'See Power Banks',powerbanks_path, class: 'btn btn-primary mt-2' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

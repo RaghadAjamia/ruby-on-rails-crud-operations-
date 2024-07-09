@@ -1,0 +1,31 @@
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <h4 class="mt-4 mb-4 display-4">Power Bank Details </h4>
+  </div>
+  <div class="row justify-content-center">
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>Serial Number:</th>
+          <td><%= @power_bank.serial_number%></td>
+        </tr>
+        <tr>
+          <th>Location Type:</th>
+          <td><%= @power_bank.locatable_type %></td>
+        </tr>
+        <tr>
+        <th>Location name:</th>
+        <td><%=@power_bank.locatable&.name %></td>
+      </tr>
+      <tr>
+        <th>Location address:</th>
+        <td><%=@power_bank.locatable&.location.address %></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <%= link_to 'Edit', edit_powerbank_path(@power_bank), class: 'btn btn-primary' %>
+          <%= link_to 'Back', powerbanks_path, class: 'btn btn-secondary' %>
+</div>

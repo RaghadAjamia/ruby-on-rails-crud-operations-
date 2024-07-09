@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h4 class="mt-4 display-4">Locations</h4>
+  </div>
+
+
+  <% if @locations.present? %>
+    <div class="row justify-content-center">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @locations.each do |location| %>
+            <tr>
+              <td><%= location.address %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% else %>
+    <div class="p-3 mb-2 bg-light text-dark">
+      <span class="text-info font-weight-bold">Welcome!</span> No locations 
+    </div>
+  <% end %>
+
+  <%= link_to 'Back', home_userhomepage_path, class: 'btn btn-primary mt-2' %>
+</div>
