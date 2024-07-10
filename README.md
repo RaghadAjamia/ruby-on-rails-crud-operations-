@@ -19,6 +19,7 @@ Usage<br/>
  Start the Rails server:<br/>
   rails server<br/>
 Open your browser and go to http://localhost:3000/ to access the admin dashboard.<br/>
+to login as admin=> email:omar@chaizer.com   password:123123<br/>
 <br/>
 <br/>
  References :
